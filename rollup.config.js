@@ -34,6 +34,14 @@ export default {
         },
       ],
       flatten: false
+    }),
+    copy({
+      targets: [
+        {
+          src: 'README.md',
+          dest: "build"
+        },
+      ]
     })
   ]
 };

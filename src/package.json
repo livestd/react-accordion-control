@@ -1,6 +1,6 @@
 {
-  "name": "react-accordion-control",
-  "version": "1.0.0",
+  "name": "@livestd/react-accordion-control",
+  "version": "1.0.2",
   "description": "base accordion component",
   "main": "index.js",
   "types": "index.d.ts",
