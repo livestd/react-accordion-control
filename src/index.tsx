@@ -13,6 +13,7 @@ export interface ControllerPropsRequired {
 }
 
 interface Props {
+  opened?: boolean;
   className?: string;
   title?: React.ReactNode;
   controller?: React.ComponentType<any & ControllerPropsRequired>;
@@ -35,10 +36,10 @@ const AccordionDefaultContainer = ({
   return <div className={`${s.container} ${open && s.opened}`}>{children}</div>;
 };
 
-const Accordion = ({ className, title, controller, container, children }: Props) => {
+const Accordion = ({ opened, className, title, controller, container, children }: Props) => {
   const Controller = controller || AccordionDefaultController;
   const Container = container || AccordionDefaultContainer;
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(!!opened);
   return (
     <div className={`${s.root} ${className}`}>
       {title}

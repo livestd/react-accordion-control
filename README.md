@@ -24,10 +24,11 @@ const AccordionCostomContainer = ({ open, children }: ContainerPropsRequired) =>
 
 export default () => (
   <Accordion
-    title="title"
-    controller=AccordionCustomController
-    container=AccordionCostomContainer
-    children="content"
+    title={"title"}
+    opened={true} // opened by default
+    controller={AccordionCustomController}
+    container={AccordionCostomContainer}
+    children={"content"}
    />
 )
 ```

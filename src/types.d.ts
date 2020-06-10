@@ -5,3 +5,8 @@ declare module '*.svg' {
     const value: SvgrComponent;
     export default value;
 }
+
+declare module "*.scss" {
+    const styles: { [className: string]: string };
+    export default styles;
+}
